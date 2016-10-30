@@ -59,7 +59,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="INIOperationClass.cs" />
     <Compile Include="LogManager.cs" />
     <Compile Include="NotifyManager.cs" />
     <Compile Include="TestWindow.xaml.cs">
