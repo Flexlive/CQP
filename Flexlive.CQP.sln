@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{105C26E7-4B6F-4EA0-BF11-3728DA0500D4}"
 	ProjectSection(SolutionItems) = preProject
 		cc.flexlive.cqeproxy.e = cc.flexlive.cqeproxy.e
+		cc.flexlive.cqeproxy.json = cc.flexlive.cqeproxy.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flexlive.CQP.Framework", "src\Flexlive.CQP.Framework\Flexlive.CQP.Framework.csproj", "{96163298-410C-4F00-AACF-FF3CE616D65F}"
