@@ -1,0 +1,1880 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Flexlive.CQP.Framework</name>
+    </assembly>
+    <members>
+        <member name="T:Flexlive.CQP.Framework.CQ">
+            <summary>
+            CQ提供的基本方法静态类。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQ._syncRoot">
+            <summary>
+            声明对象多线程同步访问锁引用。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQ.proxyType">
+            <summary>
+            酷Q C#代理类型。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQ._dicCache">
+            <summary>
+            存储群成员的缓存。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.#cctor">
+            <summary>
+            静态构造。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_At(System.Int64)">
+            <summary>
+            获取 @指定QQ 的操作代码。
+            </summary>
+            <param name="qqNumber">指定的QQ号码。
+            <para>当该参数为-1时，操作为 @全部成员。</para></param>
+            <returns>CQ @操作代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_At(System.Int64)">
+            <summary>
+            获取 @指定QQ 的操作代码。
+            </summary>
+            <param name="qqNumber">指定的QQ号码。
+            <para>当该参数为-1时，操作为 @全部成员。</para></param>
+            <returns>CQ @操作代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_emoji(System.Int32)">
+            <summary>
+            获取 指定的emoji表情代码。
+            </summary>
+            <param name="id">emoji表情索引ID。</param>
+            <returns>CQ emoji表情代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Emoji(System.Int32)">
+            <summary>
+            获取 指定的emoji表情代码。
+            </summary>
+            <param name="id">emoji表情索引ID。</param>
+            <returns>CQ emoji表情代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_表情(System.Int32)">
+            <summary>
+            获取 指定的表情代码。
+            </summary>
+            <param name="id">表情索引ID。</param>
+            <returns>CQ 表情代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Face(System.Int32)">
+            <summary>
+            获取 指定的表情代码。
+            </summary>
+            <param name="id">表情索引ID。</param>
+            <returns>CQ 表情代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_窗口抖动">
+            <summary>
+            获取 窗口抖动代码。
+            </summary>
+            <returns>CQ 窗口抖动代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Shake">
+            <summary>
+            获取 窗口抖动代码。
+            </summary>
+            <returns>CQ 窗口抖动代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_匿名(System.Boolean)">
+            <summary>
+            获取 匿名代码。
+            </summary>
+            <param name="ignore">是否不强制。</param>
+            <returns>CQ 匿名代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Anonymous(System.Boolean)">
+            <summary>
+            获取 匿名代码。
+            </summary>
+            <param name="ignore">是否不强制。</param>
+            <returns>CQ 匿名代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_图片(System.String)">
+            <summary>
+            获取 发送图片代码。
+            </summary>
+            <param name="fileName">图片路径。</param>
+            <returns>CQ 发送图片代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Image(System.String)">
+            <summary>
+            获取 发送图片代码。
+            </summary>
+            <param name="fileName">图片路径。</param>
+            <returns>CQ 发送图片代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_音乐(System.Int32)">
+            <summary>
+            获取 发送音乐代码。
+            </summary>
+            <param name="id">音乐索引ID。</param>
+            <returns>CQ 发送音乐代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Music(System.Int32)">
+            <summary>
+            获取 发送音乐代码。
+            </summary>
+            <param name="id">音乐索引ID。</param>
+            <returns>CQ 发送音乐代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_语音(System.String)">
+            <summary>
+            获取 发送语音代码。
+            </summary>
+            <param name="fileName">语音文件路径。</param>
+            <returns>CQ 发送语音代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_Record(System.String)">
+            <summary>
+            获取 发送语音代码。
+            </summary>
+            <param name="fileName">语音文件路径。</param>
+            <returns>CQ 发送语音代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQ码_链接分享(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取 链接分享代码。
+            </summary>
+            <param name="url">链接地址。</param>
+            <param name="title">标题。</param>
+            <param name="content">内容。</param>
+            <param name="imageUrl">图片地址。</param>
+            <returns>CQ 链接分享代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.CQCode_ShareLink(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取 链接分享代码。
+            </summary>
+            <param name="url">链接地址。</param>
+            <param name="title">标题。</param>
+            <param name="content">内容。</param>
+            <param name="imageUrl">图片地址。</param>
+            <returns>CQ 链接分享代码。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.发送群消息(System.Int64,System.String)">
+            <summary>
+            发送群消息。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="message">群消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SendGroupMessage(System.Int64,System.String)">
+            <summary>
+            发送群消息。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="message">群消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.发送私聊消息(System.Int64,System.String)">
+            <summary>
+            发送私聊消息。
+            </summary>
+            <param name="qqNumber">QQ号码。</param>
+            <param name="message">私聊消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SendPrivateMessage(System.Int64,System.String)">
+            <summary>
+            发送私聊消息。
+            </summary>
+            <param name="qqNumber">QQ号码。</param>
+            <param name="message">私聊消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.发送讨论组消息(System.Int64,System.String)">
+            <summary>
+            发送讨论组消息。
+            </summary>
+            <param name="discussNumber">讨论组号码。</param>
+            <param name="message">论组消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SendDiscussMessage(System.Int64,System.String)">
+            <summary>
+            发送讨论组消息。
+            </summary>
+            <param name="discussNumber">讨论组号码。</param>
+            <param name="message">论组消息内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.发送赞(System.Int64,System.Int32)">
+            <summary>
+            发送赞。
+            </summary>
+            <param name="qqNumber">被操作的QQ。</param>
+            <param name="count">发赞次数。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SendPraise(System.Int64,System.Int32)">
+            <summary>
+            发送赞(本地C++模式调用一次只能发送一个赞）。
+            </summary>
+            <param name="qqNumber">被操作的QQ。</param>
+            <param name="count">发赞次数。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.接收语音(System.String,System.String)">
+            <summary>
+            接收语音（返回保存在酷Q的data\record 目录下）。
+            </summary>
+            <param name="fileName">保存的文件名。</param>
+            <param name="postfixName">保存的文件格式。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.ReceiveVoice(System.String,System.String)">
+            <summary>
+            接收语音（返回保存在酷Q的data\record 目录下）。
+            </summary>
+            <param name="fileName">保存的文件名。</param>
+            <param name="postfixName">保存的文件格式。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群员禁言(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            置群员禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="time">禁言时长（以秒为单位)</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupMemberGag(System.Int64,System.Int64,System.Int64)">
+            <summary>
+            置群员禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="time">禁言时长（以秒为单位)</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群成员名片(System.Int64,System.Int64,System.String)">
+            <summary>
+            置群成员名片
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="newName">新的群名称。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupNickName(System.Int64,System.Int64,System.String)">
+            <summary>
+            置群成员名片
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="newName">新的群名称。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群成员专属头衔(System.Int64,System.Int64,System.String,System.Int32)">
+            <summary>
+            置群成员专属头衔
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="newName">头衔名称。</param>
+            <param name="time">过期时间（以秒为单位）。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupHonorName(System.Int64,System.Int64,System.String,System.Int32)">
+            <summary>
+            置群成员专属头衔
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="newName">头衔名称。</param>
+            <param name="time">过期时间（以秒为单位）。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群员移除(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            置群员移除。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="refuse">是否拒绝再次加群。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupMemberRemove(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            置群员移除。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="refuse">是否拒绝再次加群。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置好友添加请求(System.String,Flexlive.CQP.Framework.CQReactType,System.String)">
+            <summary>
+            置好友添加请求。
+            </summary>
+            <param name="react">请求反馈标识。</param>
+            <param name="reactType">反馈类型。</param>
+            <param name="description">备注。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetFriendAddRequest(System.String,Flexlive.CQP.Framework.CQReactType,System.String)">
+            <summary>
+            置好友添加请求。
+            </summary>
+            <param name="react">请求反馈标识。</param>
+            <param name="reactType">反馈类型。</param>
+            <param name="description">备注。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群添加请求(System.String,Flexlive.CQP.Framework.CQRequestType,Flexlive.CQP.Framework.CQReactType,System.String)">
+            <summary>
+            置群添加请求。
+            </summary>
+            <param name="react">请求反馈标识。</param>
+            <param name="requestType">请求类型。</param>
+            <param name="reactType">反馈类型。</param>
+            <param name="reason">加群原因。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupAddRequest(System.String,Flexlive.CQP.Framework.CQRequestType,Flexlive.CQP.Framework.CQReactType,System.String)">
+            <summary>
+            置群添加请求。
+            </summary>
+            <param name="react">请求反馈标识。</param>
+            <param name="requestType">请求类型。</param>
+            <param name="reactType">反馈类型。</param>
+            <param name="reason">加群原因。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群退出(System.Int64,System.Boolean)">
+            <summary>
+            置群退出。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="dissolution">是否解散。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupExit(System.Int64,System.Boolean)">
+            <summary>
+            置群退出。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="dissolution">是否解散。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群管理员(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            置群管理员。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="admin">是否设置为管理员。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupAdministrator(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            置群管理员。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="admin">是否设置为管理员。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置全群禁言(System.Int64,System.Boolean)">
+            <summary>
+            置全群禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="gag">设置或关闭全群禁言。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupAllGag(System.Int64,System.Boolean)">
+            <summary>
+            置全群禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="gag">设置或关闭全群禁言。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置群匿名设置(System.Int64,System.Boolean)">
+            <summary>
+            置群匿名设置。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="allow">开启或关闭匿名功能。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupAllowAnonymous(System.Int64,System.Boolean)">
+            <summary>
+            置群匿名设置。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="allow">开启或关闭匿名功能。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置讨论组退出(System.Int64)">
+            <summary>
+            置讨论组退出。
+            </summary>
+            <param name="discussNumber">讨论组号码。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetDiscussExit(System.Int64)">
+            <summary>
+            置讨论组退出。
+            </summary>
+            <param name="discussNumber">讨论组号码。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.置匿名群员禁言(System.Int64,System.String,System.Int64)">
+            <summary>
+            置匿名群员禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="anomymous">被操作的匿名成员名称。</param>
+            <param name="time">禁言时长（以秒为单位)</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.SetGroupAnonymousMemberGag(System.Int64,System.String,System.Int64)">
+            <summary>
+            置匿名群员禁言。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="anomymous">被操作的匿名成员名称。</param>
+            <param name="time">禁言时长（以秒为单位)</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取群成员信息(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            取群成员信息。
+            <para>
+            多线程同步等待，采用阻塞线程的方式等待客户端返回群成员信息，响应时间较慢，建议使用缓存。
+            </para>
+            <para>
+            缓存时长1天，超过1天的成员，在下次访问时会通过酷Q重新获取最新信息。
+            </para>
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="cache">是否使用缓存（使用缓存后，当后第一次访问会通过客户端读取，之后每次都通过缓存获得）。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetGroupMemberInfo(System.Int64,System.Int64,System.Boolean)">
+            <summary>
+            取群成员信息。
+            <para>
+            多线程同步等待，采用阻塞线程的方式等待客户端返回群成员信息，响应时间较慢，建议使用缓存。
+            </para>
+            <para>
+            缓存时长1天，超过1天的成员，在下次访问时会通过酷Q重新获取最新信息。
+            </para>
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <param name="qqNumber">被操作的QQ号码。</param>
+            <param name="cache">是否使用缓存（使用缓存后，当后第一次访问会通过客户端读取，之后每次都通过缓存获得）。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取登录QQ">
+            <summary>
+            取登录QQ。
+            </summary>
+            <returns>登录的QQ号码</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetLoginQQ">
+            <summary>
+            取登录QQ。
+            </summary>
+            <returns>登录的QQ号码</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取登录昵称">
+            <summary>
+            取登录昵称。
+            </summary>
+            <returns>登录的QQ号码昵称。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetLoginName">
+            <summary>
+            取登录昵称。
+            </summary>
+            <returns>登录的QQ号码昵称。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取Cookies">
+            <summary>
+            取Cookies。
+            </summary>
+            <returns>登录的Cookies。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetCookies">
+            <summary>
+            取Cookies。
+            </summary>
+            <returns>登录的Cookies。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取CsrfToken">
+            <summary>
+            取取CsrfToken。
+            </summary>
+            <returns>登录的CsrfToken。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetCsrfToken">
+            <summary>
+            取取CsrfToken。
+            </summary>
+            <returns>登录的CsrfToken。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.取应用目录">
+            <summary>
+            获取C#插件的应用目录。
+            </summary>
+            <returns>应用目录。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetCQAppFolder">
+            <summary>
+            获取酷Q插件App的目；如果是UDP方式，返回的则为酷Q主目录。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetCSPluginsFolder">
+            <summary>
+            获取C#插件的应用目录。
+            </summary>
+            <returns>应用目录。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetQQName(System.Int64)">
+            <summary>
+            取QQ昵称。
+            </summary>
+            <param name="qqNumber">QQ号码。</param>
+            <returns>昵称。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetQQFace(System.Int64)">
+            <summary>
+            取QQ头像。
+            </summary>
+            <param name="qqNumber">QQ号码。</param>
+            <returns>头像。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetGroupList">
+            <summary>
+            取酷Q登录帐号的所有群列表。
+            </summary>
+            <returns>登录帐号所在的群列表。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQ.GetGroupMemberList(System.Int64)">
+            <summary>
+            取酷指定群的成员列表（只能获取到群号、QQ号、管理权限、昵称等信息。其它信息请通过【取群成员信息】方法逐一获取）。
+            </summary>
+            <param name="groupNumber">群号码。</param>
+            <returns>登录帐号所在的群列表。</returns>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQ.ProxyType">
+            <summary>
+            代理类型。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQAPI">
+            <summary>
+            定义酷Q的API函数。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetAuthCode">
+            <summary>
+            CQCProxy类中导出的获取AC的方法。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetLoginQQ(System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取登录QQ的方法。
+            </summary>
+            <param name="ac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetCsrfToken(System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取Token的方法。
+            </summary>
+            <param name="ac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetLoginNick(System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取登录昵称的方法。
+            </summary>
+            <param name="ac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetCookies(System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取Cookies的方法。
+            </summary>
+            <param name="ac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetCQAppFolder(System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取Cookies的方法。
+            </summary>
+            <param name="ac"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetGroupMemberInfo(System.Int32,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取群成员信息的方法。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupNumber"></param>
+            <param name="qqNumber"></param>
+            <param name="nocache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.GetStrangerInfo(System.Int32,System.Int64,System.Int32)">
+            <summary>
+            CQCProxy类中导出的获取陌生人信息的方法。
+            </summary>
+            <param name="ac"></param>
+            <param name="qqNumber"></param>
+            <param name="nocache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SendPrivateMessage(System.Int32,System.Int64,System.String)">
+            <summary>
+            酷Q提供的API，实现发送私聊消息的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="qqid"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SendGroupMessage(System.Int32,System.Int64,System.String)">
+            <summary>
+            酷Q提供的API，实现发送群消息的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="grougid"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SendDiscussMessage(System.Int32,System.Int64,System.String)">
+            <summary>
+            酷Q提供的API，实现发送讨论组消息的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="discussid"></param>
+            <param name="msg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SendLike(System.Int32,System.Int64)">
+            <summary>
+            酷Q提供的API，实现发赞的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="QQID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupKick(System.Int32,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            酷Q提供的API，实现群踢人的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="QQID"></param>
+            <param name="rejectaddrequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupBan(System.Int32,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            酷Q提供的API，实现群成员禁言的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="QQID"></param>
+            <param name="duration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupAdmin(System.Int32,System.Int64,System.Int64,System.Int32)">
+            <summary>
+            酷Q提供的API，实现设置管理员的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="QQID"></param>
+            <param name="setadmin"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupWholeBan(System.Int32,System.Int64,System.Int32)">
+            <summary>
+            酷Q提供的API，实现全员禁言的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="enableban"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupAnonymousBan(System.Int32,System.Int64,System.String,System.Int64)">
+            <summary>
+            酷Q提供的API，实现匿名聊天禁言的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="anomymous"></param>
+            <param name="duration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupAnonymous(System.Int32,System.Int64,System.Int32)">
+            <summary>
+            酷Q提供的API，实现匿名功能设置的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="enableanomymous"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupCard(System.Int32,System.Int64,System.Int64,System.String)">
+            <summary>
+            酷Q提供的API，实现修改群名片的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="QQID"></param>
+            <param name="newcard"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupLeave(System.Int32,System.Int64,System.Int32)">
+            <summary>
+            酷Q提供的API，实现退群的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="isdismiss"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupSpecialTitle(System.Int32,System.Int64,System.Int64,System.String,System.Int64)">
+            <summary>
+            酷Q提供的API，实现群头衔的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="groupid"></param>
+            <param name="QQID"></param>
+            <param name="newspecialtitle"></param>
+            <param name="duration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetDiscussLeave(System.Int32,System.Int64)">
+            <summary>
+            酷Q提供的API，实现退出讨论组的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="discussid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetFriendAddRequest(System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            酷Q提供的API，实现加好友请求处理的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="responseflag"></param>
+            <param name="responseoperation"></param>
+            <param name="remark"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAPI.SetGroupAddRequestV2(System.Int32,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            酷Q提供的API，实现加群请求处理的功能。
+            </summary>
+            <param name="ac"></param>
+            <param name="responseflag"></param>
+            <param name="requesttype"></param>
+            <param name="responseoperation"></param>
+            <param name="reason"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQAppAbstract">
+            <summary>
+            CQ应用抽象类，自定义应用请继承此类。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.ICQAssembly">
+            <summary>
+            插件程序集属性接口。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.ICQAssembly.OpenSettingForm">
+            <summary>
+            打开设置窗口。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.ICQAssembly.AssemblyPath">
+            <summary>
+            程序集路径。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.ICQAssembly.Name">
+            <summary>
+            获取或设置插件名称。
+            </summary>
+            <value>
+            插件名称字符串。
+            </value>
+            <return>
+            插件名称字符串。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.ICQAssembly.Version">
+            <summary>
+            获取或设置插件版本。
+            </summary>
+            <value>
+            插件版本信息。
+            </value>
+            <return>
+            插件版本信息。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.ICQAssembly.Author">
+            <summary>
+            获取或设置插件作者。
+            </summary>
+            <value>
+            插件作者名称。
+            </value>
+            <return>
+            插件作者名称。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.ICQAssembly.Description">
+            <summary>
+            获取或设置插件说明。
+            </summary>
+            <value>
+            插件说明描述信息。
+            </value>
+            <return>
+            插件说明描述信息。
+            </return>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.Initialize">
+            <summary>
+            应用初始化，用来初始化应用的基本信息。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.Startup">
+            <summary>
+            应用启动，完成插件线程、全局变量等自身运行所必须的初始化工作。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.PrivateMessage(System.Int32,System.Int32,System.Int64,System.String,System.Int32)">
+            <summary>
+            Type=21 私聊消息。
+            </summary>
+            <param name="subType">子类型，11/来自好友 1/来自在线状态 2/来自群 3/来自讨论组。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="msg">消息内容。</param>
+            <param name="font">字体。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.GroupMessage(System.Int32,System.Int32,System.Int64,System.Int64,System.String,System.String,System.Int32)">
+            <summary>
+            Type=2 群消息。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群号。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="fromAnonymous">来源匿名者。</param>
+            <param name="msg">消息内容。</param>
+            <param name="font">字体。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.DiscussMessage(System.Int32,System.Int32,System.Int64,System.Int64,System.String,System.Int32)">
+            <summary>
+            Type=4 讨论组消息。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromDiscuss">来源讨论组。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="msg">消息内容。</param>
+            <param name="font">字体。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.GroupUpload(System.Int32,System.Int32,System.Int64,System.Int64,System.String)">
+            <summary>
+            Type=11 群文件上传事件。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群号。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="file">上传文件信息。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.GroupAdmin(System.Int32,System.Int32,System.Int64,System.Int64)">
+            <summary>
+            Type=101 群事件-管理员变动。
+            </summary>
+            <param name="subType">子类型，1/被取消管理员 2/被设置管理员。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群号。</param>
+            <param name="beingOperateQQ">被操作QQ。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.GroupMemberDecrease(System.Int32,System.Int32,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Type=102 群事件-群成员减少。
+            </summary>
+            <param name="subType">子类型，1/群员离开 2/群员被踢 3/自己(即登录号)被踢。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="beingOperateQQ">被操作QQ。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.GroupMemberIncrease(System.Int32,System.Int32,System.Int64,System.Int64,System.Int64)">
+            <summary>
+            Type=103 群事件-群成员增加。
+            </summary>
+            <param name="subType">子类型，1/管理员已同意 2/管理员邀请。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="beingOperateQQ">被操作QQ。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.FriendAdded(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Type=201 好友事件-好友已添加。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromQQ">来源QQ。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.RequestAddFriend(System.Int32,System.Int32,System.Int64,System.String,System.String)">
+            <summary>
+            Type=301 请求-好友添加。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="msg">附言。</param>
+            <param name="responseFlag">反馈标识(处理请求用)。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.RequestAddGroup(System.Int32,System.Int32,System.Int64,System.Int64,System.String,System.String)">
+            <summary>
+            Type=302 请求-群添加。
+            </summary>
+            <param name="subType">子类型，目前固定为1。</param>
+            <param name="sendTime">发送时间(时间戳)。</param>
+            <param name="fromGroup">来源群号。</param>
+            <param name="fromQQ">来源QQ。</param>
+            <param name="msg">附言。</param>
+            <param name="responseFlag">反馈标识(处理请求用)。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppAbstract.OpenSettingForm">
+            <summary>
+            打开设置窗口。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.Name">
+            <summary>
+            获取或设置插件名称。
+            </summary>
+            <value>
+            插件名称字符串。
+            </value>
+            <return>
+            插件名称字符串。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.Version">
+            <summary>
+            获取或设置插件版本。
+            </summary>
+            <value>
+            插件版本信息。
+            </value>
+            <return>
+            插件版本信息。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.Author">
+            <summary>
+            获取或设置插件作者。
+            </summary>
+            <value>
+            插件作者名称。
+            </value>
+            <return>
+            插件作者名称。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.Description">
+            <summary>
+            获取或设置插件说明。
+            </summary>
+            <value>
+            插件说明描述信息。
+            </value>
+            <return>
+            插件说明描述信息。
+            </return>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.AssemblyPath">
+            <summary>
+            获取程序集路径。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppAbstract.RunningStatus">
+            <summary>
+            是否运行该插件。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQGroupInfo">
+            <summary>
+            群信息。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQGroupInfo.#ctor">
+            <summary>
+            创建一个 <see cref="T:Flexlive.CQP.Framework.CQGroupInfo"/> 实例。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupInfo.GroupNumber">
+            <summary>
+            获取或设置群号码。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupInfo.群号">
+            <summary>
+            获取或设置群号码。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupInfo.GroupName">
+            <summary>
+            获取或设置群名称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupInfo.群名称">
+            <summary>
+            获取或设置群名称。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQLogEventArgs">
+            <summary>
+            CQ日志事件参数类。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQLogEventArgs.LogTime">
+            <summary>
+            日志发生的时间。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQLogEventArgs.LogSource">
+            <summary>
+            日志来源。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQLogEventArgs.LogType">
+            <summary>
+            日志类型。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQLogEventArgs.LogMessage">
+            <summary>
+            日志信息。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQMessageAnalysis">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQMessageAnalysis._syncRoot">
+            <summary>
+            声明对象多线程同步访问锁引用。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQMessageAnalysis.#cctor">
+            <summary>
+            静态构造。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQMessageAnalysis.Analyze(System.String)">
+            <summary>
+            解析数据。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQMessageAnalysis.AnalyzeGroupMember(System.String)">
+            <summary>
+            解析群成员信息。
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQMessageAnalysis.CallMethod(System.String,System.Object[])">
+            <summary>
+            代理为NativeClr方式时，调用执行方法。
+            </summary>
+            <param name="methodName"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQGroupMemberInfo">
+            <summary>
+            群成员信息。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQGroupMemberInfo.#ctor">
+            <summary>
+            创建一个实例。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.GroupNumber">
+            <summary>
+            获取群号。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.群号">
+            <summary>
+            获取群号。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.QQNumber">
+            <summary>
+            获取QQ号码
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.QQName">
+            <summary>
+            获取昵称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.昵称">
+            <summary>
+            获取昵称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.GroupCard">
+            <summary>
+            获取群名称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.名片">
+            <summary>
+            获取群名称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.Gender">
+            <summary>
+            获取性别
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.性别">
+            <summary>
+            获取性别
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.Age">
+            <summary>
+            获取年龄。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.年龄">
+            <summary>
+            获取年龄。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.JoinTime">
+            <summary>
+            获取加群时间。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.加群时间">
+            <summary>
+            获取加群时间。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.LastSpeakingTime">
+            <summary>
+            获取最后发言。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.最后发言">
+            <summary>
+            获取最后发言。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.Authority">
+            <summary>
+            获取管理权限 成员；管理员；群主。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.管理权限">
+            <summary>
+            获取管理权限 成员；管理员；群主。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.GroupHonor">
+            <summary>
+            获取专属头衔。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.专属头衔">
+            <summary>
+            获取专属头衔。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.Area">
+            <summary>
+            获取地区。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.地区">
+            <summary>
+            获取地区。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.LevelName">
+            <summary>
+            获取等级名称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.等级名称">
+            <summary>
+            获取等级名称。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.HasBadRecord">
+            <summary>
+            获取不良记录成员。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.不良记录成员">
+            <summary>
+            获取不良记录成员。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.CanModifyVestCard">
+            <summary>
+            获取允许修改名片。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.允许修改名片">
+            <summary>
+            获取允许修改名片。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.HonorExpirationTimes">
+            <summary>
+            获取专属头衔过期时间(以秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.专属头衔过期时间">
+            <summary>
+            获取专属头衔过期时间(以秒为单位）。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQGroupMemberInfo.RefreshDate">
+            <summary>
+            数据刷新时间。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQAppContainer">
+            <summary>
+            插件容器类。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQAppContainer._instance">
+            <summary>
+            声明单例对象。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQAppContainer._syncRoot">
+            <summary>
+            声明对象多线程同步访问锁引用。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppContainer.#ctor">
+            <summary>
+            隐藏构造函数。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppContainer.GetInstance">
+            <summary>
+            创建一个 <see cref="T:Flexlive.CQP.Framework.CQAppContainer"/> 单例对象。
+            </summary>
+            <returns>一个 <see cref="T:Flexlive.CQP.Framework.CQAppContainer"/> 对象。</returns>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQAppContainer._apps">
+            <summary>
+            声明插件列表对象。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQAppContainer._dicClrApps">
+            <summary>
+            声明插件列表对象。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQAppContainer._dicClrMethods">
+            <summary>
+            声明插件方法列表对象。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppContainer.ReloadApps">
+            <summary>
+            重新加载插件列表。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQAppContainer.LoadApps">
+            <summary>
+            加载插件列表。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppContainer.Apps">
+            <summary>
+            获取插件列表。
+            </summary>
+            <returns>
+            插件列表。
+            </returns>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppContainer.ClrApps">
+            <summary>
+            CLR加载的插件列表。
+            </summary>
+        </member>
+        <member name="P:Flexlive.CQP.Framework.CQAppContainer.ClrMethods">
+            <summary>
+            CLR加载的插件方法列表。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQNativeClrProxy">
+            <summary>
+            采用本地C++/Clr方式的数据代理类。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQNativeClrProxy.ReceiveMessage(System.String)">
+            <summary>
+            接收数据。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQNativeClrProxy.AnalyzeMessage(System.Object)">
+            <summary>
+            解析消息。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQProxyType">
+            <summary>
+            酷Q C#代理的类型。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQProxyType.UDP">
+            <summary>
+            基于UDP通讯的代理方式。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQProxyType.NativeClr">
+            <summary>
+            通过托管C++实现本地的CLR调用。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQReactType">
+            <summary>
+            请求的反馈类型。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQReactType.Allow">
+            <summary>
+            同意。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQReactType.Deny">
+            <summary>
+            拒绝。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQRequestType">
+            <summary>
+            请求类型枚举。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQRequestType.GroupAdd">
+            <summary>
+            请求加群。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQRequestType.GroupInvite">
+            <summary>
+            邀请加群。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CSPluginsConfigManager">
+            <summary>
+            插件配置管理类。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CSPluginsConfigManager._instance">
+            <summary>
+            单实例对象。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CSPluginsConfigManager._dicPluginsLoadingStatus">
+            <summary>
+            应用加载状态。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.#ctor">
+            <summary>
+            创建一个实例。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.GetInstance">
+            <summary>
+            获取一个单例对象。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.GetLoadingStatus(System.String)">
+            <summary>
+            获取插件加载状态。
+            </summary>
+            <param name="pluginName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.SetLoadingStatus(System.String,System.Boolean)">
+            <summary>
+            设置插件加载状态。
+            </summary>
+            <param name="pluginName"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.LoadConfig">
+            <summary>
+            读取配置。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CSPluginsConfigManager.SaveConfig">
+            <summary>
+            存储配置。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.Utils.HttpHelper">
+            <summary>
+            Http访问的操作类。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.String,System.String,System.Int32,System.Net.WebHeaderCollection,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="userAgent">User-Agent HTTP标头。</param>
+            <param name="accept">Accept HTTP标头。</param>
+            <param name="timeout">超时时间。</param>
+            <param name="header">HTTP 标头。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.Net.WebHeaderCollection,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="header">HTTP 标头。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.Net.CookieCollection,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.String,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="referer">参照页。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Get(System.String,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Get请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.String,System.Int32,System.Net.WebHeaderCollection,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="userAgent">User-Agent HTTP标头。</param>
+            <param name="accept">Accept HTTP标头。</param>
+            <param name="timeout">超时时间。</param>
+            <param name="header">HTTP 标头。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Net.WebHeaderCollection,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="header">HTTP 标头。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Net.CookieCollection,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Net.CookieCollection,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="cookies">Cookies。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Text.Encoding,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="encoding">文本编码。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="referer">参照页。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.Post(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.Net.DecompressionMethods)">
+            <summary>
+            向HTTP服务器发送Post请求。
+            </summary>
+            <param name="url">请求地址。</param>
+            <param name="parameters">请求参数。</param>
+            <param name="decompression">加密方式。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.GetImage(System.String)">
+            <summary>
+            获取图像信息
+            </summary>
+            <param name="url">Url地址</param>
+            <returns>Image对象</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.UrlEncode(System.String)">
+            <summary>
+            Url编码数据。
+            </summary>
+            <param name="data">要编码的数据。</param>
+            <returns>编码后的数据</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.UrlDecode(System.String)">
+            <summary>
+            Url解码。
+            </summary>
+            <param name="data">要解码的数据。</param>
+            <returns>解码后的数据。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.GetResponseString(System.Net.HttpWebResponse,System.Text.Encoding)">
+            <summary>
+            获取请求的数据。
+            </summary>
+            <param name="webResponse"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.HttpHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            验证证书
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.Utils.IniFileHelper">
+            <summary>
+            Ini文件操作类
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetPrivateProfileSectionNames(System.IntPtr,System.UInt32,System.String)">
+            <summary>  
+            获取所有节点名称(Section)  
+            </summary>  
+            <param name="lpszReturnBuffer">存放节点名称的内存地址,每个节点之间用\0分隔</param>  
+            <param name="nSize">内存大小(characters)</param>  
+            <param name="lpFileName">文件</param>  
+            <returns>内容的实际长度,为0表示没有内容,为nSize-2表示内存大小不够</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetPrivateProfileSection(System.String,System.IntPtr,System.UInt32,System.String)">
+            <summary>  
+            获取某个指定节点(Section)中所有KEY和Value  
+            </summary>  
+            <param name="lpAppName">节点名称</param>  
+            <param name="lpReturnedString">返回值的内存地址,每个之间用\0分隔</param>  
+            <param name="nSize">内存大小(characters)</param>  
+            <param name="lpFileName">文件</param>  
+            <returns>内容的实际长度,为0表示没有内容,为nSize-2表示内存大小不够</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetPrivateProfileString(System.String,System.String,System.String,System.Char[],System.UInt32,System.String)">
+            <summary>  
+            读取文件中指定的Key的值  
+            </summary>  
+            <param name="lpAppName">节点名称。如果为null,则读取中所有节点名称,每个节点名称之间用\0分隔</param>  
+            <param name="lpKeyName">Key名称。如果为null,则读取中指定节点中的所有KEY,每个KEY之间用\0分隔</param>  
+            <param name="lpDefault">读取失败时的默认值</param>  
+            <param name="lpReturnedString">读取的内容缓冲区，读取之后，多余的地方使用\0填充</param>  
+            <param name="nSize">内容缓冲区的长度</param>  
+            <param name="lpFileName">文件名</param>  
+            <returns>实际读取到的长度</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.WritePrivateProfileSection(System.String,System.String,System.String)">
+            <summary>  
+            将指定的键值对写到指定的节点，如果已经存在则替换。  
+            </summary>  
+            <param name="lpAppName">节点，如果不存在此节点，则创建此节点</param>  
+            <param name="lpString">Item键值对，多个用\0分隔,形如key1=value1\0key2=value2  
+            <para>如果为string.Empty，则删除指定节点下的所有内容，保留节点</para>  
+            <para>如果为null，则删除指定节点下的所有内容，并且删除该节点</para>  
+            </param>  
+            <param name="lpFileName">文件</param>  
+            <returns>是否成功写入</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.WritePrivateProfileString(System.String,System.String,System.String,System.String)">
+            <summary>  
+            将指定的键和值写到指定的节点，如果已经存在则替换  
+            </summary>  
+            <param name="lpAppName">节点名称</param>  
+            <param name="lpKeyName">键名称。如果为null，则删除指定的节点及其所有的项目</param>  
+            <param name="lpString">值内容。如果为null，则删除指定节点中指定的键。</param>  
+            <param name="lpFileName">文件</param>  
+            <returns>操作是否成功</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetAllSectionNames(System.String)">
+            <summary>  
+            读取文件中指定文件中的所有节点名称(Section)  
+            </summary>  
+            <param name="File">文件</param>  
+            <returns>所有节点,没有内容返回string[0]</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetAllItems(System.String,System.String)">
+            <summary>  
+            获取文件中指定节点(Section)中的所有条目(key=value形式)  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点名称</param>  
+            <returns>指定节点中的所有项目,没有内容返回string[0]</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetAllItemKeys(System.String,System.String)">
+            <summary>  
+            获取文件中指定节点(Section)中的所有条目的Key列表  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点名称</param>  
+            <returns>如果没有内容,反回string[0]</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.GetStringValue(System.String,System.String,System.String,System.String)">
+            <summary>  
+            读取文件中指定KEY的字符串型值  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点名称</param>  
+            <param name="key">键名称</param>  
+            <param name="defaultValue">如果没此KEY所使用的默认值</param>  
+            <returns>读取到的值</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.WriteItems(System.String,System.String,System.String)">
+            <summary>  
+            在文件中，将指定的键值对写到指定的节点，如果已经存在则替换  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点，如果不存在此节点，则创建此节点</param>  
+            <param name="items">键值对，多个用\0分隔,形如key1=value1\0key2=value2</param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.WriteValue(System.String,System.String,System.String,System.String)">
+            <summary>  
+            在文件中，指定节点写入指定的键及值。如果已经存在，则替换。如果没有则创建。  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点</param>  
+            <param name="key">键</param>  
+            <param name="value">值</param>  
+            <returns>操作是否成功</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.DeleteKey(System.String,System.String,System.String)">
+            <summary>  
+            在文件中，删除指定节点中的指定的键。  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点</param>  
+            <param name="key">键</param>  
+            <returns>操作是否成功</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.DeleteSection(System.String,System.String)">
+            <summary>  
+            在文件中，删除指定的节点。  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点</param>  
+            <returns>操作是否成功</returns>  
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.IniFileHelper.EmptySection(System.String,System.String)">
+            <summary>  
+            在文件中，删除指定节点中的所有内容。  
+            </summary>  
+            <param name="File">文件</param>  
+            <param name="section">节点</param>  
+            <returns>操作是否成功</returns>  
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQLogger">
+            <summary>
+            日志管理。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQLogger.GetInstance">
+            <summary>
+            初始化 <see cref="T:Flexlive.CQP.Framework.CQLogger"/> 的一个单例。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQLogger.#ctor">
+            <summary>
+            隐藏构造函数。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQLogger.AddLog(System.String)">
+            <summary>
+            添加日志。
+            </summary>
+            <param name="logMessage">日志消息。</param>
+        </member>
+        <member name="E:Flexlive.CQP.Framework.CQLogger.NewLogWrite">
+            <summary>
+            新日志产生事件。
+            </summary>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.CQUDPProxy">
+            <summary>
+            CQ易语言程序代理类。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQUDPProxy._syncRoot">
+            <summary>
+            声明对象多线程同步访问锁引用。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQUDPProxy._callback">
+            <summary>
+            线程回调委托。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQUDPProxy.myResetEvent">
+            <summary>
+            线程同步等待锁对象。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQUDPProxy._strMessage">
+            <summary>
+            定义接收到的消息字符串。
+            </summary>
+        </member>
+        <member name="F:Flexlive.CQP.Framework.CQUDPProxy.instance">
+            <summary>
+            单例对象。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.GetInstance">
+            <summary>
+            创建一个实例。
+            </summary>
+            <returns>一个 <see cref="T:Flexlive.CQP.Framework.CQUDPProxy"/> 实例。</returns>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.#ctor">
+            <summary>
+            隐藏默认构造函数。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.Start">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.ReceiveMessage">
+            <summary>
+            接收数据。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.AnalyzeMessage(System.Object)">
+            <summary>
+            解析消息。
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.SendMessage(System.String)">
+            <summary>
+            发送数据。
+            </summary>
+            <param name="message">要发送的数据内容。</param>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.GetGroupMemberInfo(System.String)">
+            <summary>
+            获取群成员列表，阻塞线程，等待客户端响应（有风险，待测试）。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.CQUDPProxy.GetStringMessage(System.String)">
+            <summary>
+            从酷Q获取文本型返回数据。
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Flexlive.CQP.Framework.Utils.StringHelper">
+            <summary>
+            文本操作类。
+            </summary>
+        </member>
+        <member name="M:Flexlive.CQP.Framework.Utils.StringHelper.GetMidStrings(System.String,System.String,System.String)">
+            <summary>
+            通过正则表达式获取源字符串中所有匹配的起始和结束字符串之间的内容。
+            </summary>
+            <param name="sourceString">源字符串。</param>
+            <param name="startString">起始字符串。</param>
+            <param name="endString">结束字符串。</param>
+            <returns>所有匹配的字符串数组，无匹配时返回Null。</returns>
+        </member>
+    </members>
+</doc>

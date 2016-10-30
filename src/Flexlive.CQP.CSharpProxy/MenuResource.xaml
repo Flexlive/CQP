@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <ContextMenu x:Key="NotifierContextMenu" Placement="MousePoint">
+        <MenuItem Header="显示主程序" Tag="cmnuShow"/>
+        <Separator/>
+        <MenuItem Header="退出" Tag="cmnuExit">
+            <!--<MenuItem.Icon>
+                <Image Source="Images\Menu\door_in.png"/>
+            </MenuItem.Icon>-->
+        </MenuItem>
+    </ContextMenu>
+    
+</ResourceDictionary>
